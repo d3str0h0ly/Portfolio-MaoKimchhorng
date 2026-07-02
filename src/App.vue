@@ -56,7 +56,7 @@
           </h2>
 
           <h1 class="reveal hero-title" data-reveal style="--delay:0.1s">
-            <span class="line">I build interfaces that</span>
+            <span class="line">Mao Kimchhorng</span>
             <span class="line gradient-text">{{ typedText }}<span class="caret">|</span></span>
           </h1>
 
@@ -70,7 +70,7 @@
             <button class="btn-primary" @click="scrollTo('projects')">
               View Projects <span class="arrow">→</span>
             </button>
-            <a class="btn-ghost" href="/resume-mao-kimchhorng.pdf" download>
+            <a class="btn-ghost" href="../src/assets/img/Mao-Kimchhorng-CV.pdf" download>
               Download Résumé
             </a>
             <button class="btn-ghost" @click="scrollTo('contact')">
@@ -420,7 +420,7 @@ const navLinks = [
 ];
 
 /* ---------- typing effect ---------- */
-const typedPhrases = ['feel inevitable.', 'scale with confidence.', 'people remember.', 'just work.'];
+const typedPhrases = ['Web Developer', 'Web Designer', 'Frontend Engineer', 'Backend Engineer', 'Full-Stack Developer', 'UI/UX Enthusiast'];
 const typedText = ref('');
 let typeState = { phrase: 0, char: 0, deleting: false };
 
@@ -431,7 +431,7 @@ function tick() {
     typedText.value = current.slice(0, typeState.char);
     if (typeState.char === current.length) {
       typeState.deleting = true;
-      setTimeout(tick, 1400);
+      setTimeout(tick, 1200);
       return;
     }
   } else {
