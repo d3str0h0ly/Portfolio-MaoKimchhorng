@@ -52,7 +52,7 @@
           </div>
 
           <h2 class="reveal kicker tech-text" data-reveal style="--delay:0.05s">
-            FULL-STACK ENGINEER · SOUTHEAST ASIA
+            FULL-STACK ENGINEER · CAMBODIA · PHNOM PENH
           </h2>
 
           <h1 class="reveal hero-title" data-reveal style="--delay:0.1s">
@@ -61,9 +61,8 @@
           </h1>
 
           <p class="reveal hero-sub" data-reveal style="--delay:0.2s">
-            Mao Kimchhorng — I design and ship production-grade web applications,
-            from pixel-precise frontends to the systems behind them. Currently based
-            in Phnom Penh, working with teams worldwide.
+            Passionate Full-Stack Web Developer building responsive, scalable web applications. Seeking an internship or
+            Junior Developer role to contribute, learn, and grow.
           </p>
 
           <div class="reveal hero-ctas" data-reveal style="--delay:0.3s">
@@ -103,8 +102,8 @@
       </div>
 
       <div class="hero-footer container">
-        <span class="text-code small opacity-50">LAT 11.5564° N</span>
-        <span class="text-code small opacity-50">LNG 104.9282° E</span>
+        <!-- <span class="text-code small opacity-50">LAT 11.5564° N</span> -->
+        <!-- <span class="text-code small opacity-50">LNG 104.9282° E</span> -->
         <button class="scroll-cue" @click="scrollTo('who-am-i')" aria-label="Scroll down">
           <span></span>
         </button>
@@ -124,7 +123,7 @@
               <div class="corner tr"></div>
               <div class="corner bl"></div>
               <div class="corner br"></div>
-              <img src="https://via.placeholder.com/500x620" class="img-fluid" alt="Mao Kimchhorng">
+              <!-- <img src="https://via.placeholder.com/500x620" class="img-fluid" alt="Mao Kimchhorng"> -->
             </div>
             <div class="fun-facts glass-card">
               <h6 class="text-code text-lime small mb-3">FUN_FACTS</h6>
@@ -261,7 +260,7 @@
     <section id="experience" class="section bg-darker">
       <div class="container">
         <h6 class="eyebrow reveal" data-reveal>// 04 — TIMELINE</h6>
-        <h2 class="section-title reveal" data-reveal>Where I've worked</h2>
+        <h2 class="section-title reveal" data-reveal>What I've worked on</h2>
 
         <div class="exp-timeline">
           <div class="exp-line"></div>
@@ -392,7 +391,7 @@
 import { ref, reactive, computed, onMounted, onBeforeUnmount, nextTick } from 'vue';
 
 /* ============================================================
-   STATE
+  STATE
    ============================================================ */
 const appRoot = ref(null);
 const vantaRef = ref(null);
@@ -420,7 +419,7 @@ const navLinks = [
 ];
 
 /* ---------- typing effect ---------- */
-const typedPhrases = ['Web Developer', 'Web Designer', 'Frontend Engineer', 'Backend Engineer', 'Full-Stack Developer', 'UI/UX Enthusiast'];
+const typedPhrases = ['Web Developer', 'Web Designer', 'Frontend Engineer', 'Backend Engineer', 'Full-Stack Developer', 'UI/UX Design'];
 const typedText = ref('');
 let typeState = { phrase: 0, char: 0, deleting: false };
 
@@ -458,12 +457,19 @@ function handleSubmit() {
    CONTENT
    ============================================================ */
 const badges = [
+  { name: 'HTML', icon: 'fab fa-html5', color: '#E34C26' },
+  { name: 'CSS', icon: 'fab fa-css3-alt', color: '#1572B6' },
   { name: 'Vue 3', icon: 'fab fa-vuejs', color: '#42B883' },
   { name: 'React', icon: 'fab fa-react', color: '#61DAFB' },
-  { name: 'TypeScript', icon: 'fas fa-code', color: '#3178C6' },
+  // { name: 'TypeScript', icon: 'fas fa-code', color: '#3178C6' },
   { name: 'Node.js', icon: 'fab fa-node-js', color: '#339933' },
-  { name: 'PostgreSQL', icon: 'fas fa-database', color: '#4169E1' },
-  { name: 'Docker', icon: 'fab fa-docker', color: '#0db7ed' },
+  { name: 'Express', icon: 'fab fa-node-js', color: '#339933' },
+  // { name: 'PostgreSQL', icon: 'fas fa-database', color: '#4169E1' },
+  // { name: 'Docker', icon: 'fab fa-docker', color: '#0db7ed' },
+  { name: 'MySQL', icon: 'fas fa-database', color: '#4479A1' },
+  { name: 'Figma', icon: 'fab fa-figma', color: '#F24E1E' },
+  { name: 'Git', icon: 'fab fa-git-alt', color: '#F05032' },
+  { name: 'Github', icon: 'fab fa-github', color: '#333' },
 ];
 
 const funFacts = [
@@ -480,44 +486,130 @@ const aboutCards = [
 ];
 
 const story = [
-  { year: '2021', title: 'First line of code', body: 'Started with HTML/CSS, building static pages for local businesses.' },
-  { year: '2022', title: 'Scholarship @ ANT', body: 'Selected for an intensive full-stack training program.' },
-  { year: '2023', title: 'First freelance clients', body: 'Shipped Vue & React apps for small businesses and startups.' },
-  { year: '2025', title: 'Full-time engineer', body: 'Joined a product team building customer-facing platforms at scale.' },
+  { year: '2024', title: 'First line of code', body: 'Started with HTML/CSS, building static pages for local businesses.' },
+  { year: '2025', title: 'Scholarship @ ANT', body: 'Selected for an intensive full-stack training program.' },
+  { year: '2025', title: 'First freelance clients', body: 'Shipped Vue & React apps for small businesses and startups.' },
+  { year: '2026', title: 'Full-time engineer', body: 'Joined a product team building customer-facing platforms at scale.' },
 ];
 
 const skillGroups = [
-  { name: 'Frontend' }, { name: 'Backend' }, { name: 'Database' },
-  { name: 'DevOps' }, { name: 'Tools' }, { name: 'UI/UX' },
+  { name: 'Frontend' },
+  { name: 'Backend' },
+  { name: 'Database' },
+  // { name: 'DevOps' },
+  { name: 'Tools' }, { name: 'UI/UX' },
 ];
 const activeSkillGroup = ref('Frontend');
 
 const skillsByGroup = {
   Frontend: [
-    { name: 'Vue 3', icon: 'fab fa-vuejs', color: '#42B883', level: 92, years: '3y', related: ['Pinia', 'Vue Router', 'Nuxt'] },
-    { name: 'React', icon: 'fab fa-react', color: '#61DAFB', level: 80, years: '2y', related: ['Next.js', 'Redux'] },
-    { name: 'TypeScript', icon: 'fas fa-code', color: '#3178C6', level: 85, years: '2y', related: ['ESLint', 'Zod'] },
-    { name: 'CSS / Tailwind', icon: 'fab fa-css3-alt', color: '#1572B6', level: 90, years: '3y', related: ['Bootstrap', 'SCSS'] },
+    {
+      name: 'HTML5',
+      icon: 'fab fa-html5',
+      color: '#E34F26',
+      level: 95,
+      years: '1y',
+      related: ['Semantic HTML', 'Accessibility']
+    },
+    {
+      name: 'CSS3',
+      icon: 'fab fa-css3-alt',
+      color: '#1572B6',
+      level: 90,
+      years: '1y',
+      related: ['Flexbox', 'Grid', 'Animations']
+    },
+    {
+      name: 'Bootstrap 5',
+      icon: 'fab fa-bootstrap',
+      color: '#7952B3',
+      level: 90,
+      years: '1y',
+      related: ['Responsive Design', 'Bootstrap Icons']
+    },
+    {
+      name: 'JavaScript',
+      icon: 'fab fa-js',
+      color: '#F7DF1E',
+      level: 88,
+      years: '1y',
+      related: ['ES6+', 'DOM', 'Async/Await']
+    },
+    {
+      name: 'Vue 3',
+      icon: 'fab fa-vuejs',
+      color: '#42B883',
+      level: 92,
+      years: '1y',
+      related: ['Pinia', 'Vue Router']
+    },
+    // {
+    //   name: 'TypeScript',
+    //   icon: 'fas fa-code',
+    //   color: '#3178C6',
+    //   level: 80,
+    //   years: '1y',
+    //   related: ['Interfaces', 'Type Safety']
+    // },
+    {
+      name: 'React',
+      icon: 'fab fa-react',
+      color: '#61DAFB',
+      level: 75,
+      years: '1y',
+      related: ['Hooks', 'Next.js']
+    },
   ],
   Backend: [
-    { name: 'Node.js', icon: 'fab fa-node-js', color: '#339933', level: 84, years: '2y', related: ['Express', 'Fastify'] },
-    { name: 'REST / GraphQL', icon: 'fas fa-diagram-project', color: '#e535ab', level: 78, years: '2y', related: ['Apollo'] },
+    {
+      name: 'Node.js',
+      icon: 'fab fa-node-js',
+      color: '#339933',
+      level: 85,
+      years: '1y',
+      related: ['npm', 'JavaScript Runtime']
+    },
+    {
+      name: 'Express.js',
+      icon: 'fas fa-server',
+      color: '#FFFF',
+      level: 85,
+      years: '1y',
+      related: ['REST API', 'Middleware', 'Routing']
+    },
+    {
+      name: 'REST API',
+      icon: 'fas fa-network-wired',
+      color: '#4CAF50',
+      level: 82,
+      years: '1y',
+      related: ['CRUD', 'JSON', 'HTTP']
+    },
+    // {
+    //   name: 'GraphQL',
+    //   icon: 'fas fa-diagram-project',
+    //   color: '#E535AB',
+    //   level: 70,
+    //   years: '1y',
+    //   related: ['Apollo']
+    // },
   ],
   Database: [
-    { name: 'PostgreSQL', icon: 'fas fa-database', color: '#4169E1', level: 80, years: '2y', related: ['Prisma'] },
-    { name: 'Firebase', icon: 'fas fa-fire', color: '#FFCA28', level: 75, years: '2y', related: ['Firestore'] },
-    { name: 'MongoDB', icon: 'fas fa-leaf', color: '#47A248', level: 70, years: '1y', related: ['Mongoose'] },
+    { name: 'MySQL', icon: 'fas fa-database', color: '#4479A1', level: 85, years: '1y', related: ['MySQL Workbench'] },
+    // { name: 'PostgreSQL', icon: 'fas fa-database', color: '#4169E1', level: 80, years: '2y', related: ['Prisma'] },
+    // { name: 'Firebase', icon: 'fas fa-fire', color: '#FFCA28', level: 75, years: '2y', related: ['Firestore'] },
+    // { name: 'MongoDB', icon: 'fas fa-leaf', color: '#47A248', level: 70, years: '1y', related: ['Mongoose'] },
   ],
-  DevOps: [
-    { name: 'Docker', icon: 'fab fa-docker', color: '#0db7ed', level: 72, years: '1y', related: ['Compose'] },
-    { name: 'CI / CD', icon: 'fas fa-rotate', color: '#d4ff70', level: 70, years: '1y', related: ['GitHub Actions'] },
-  ],
+  // DevOps: [
+  //   { name: 'Docker', icon: 'fab fa-docker', color: '#0db7ed', level: 72, years: '1y', related: ['Compose'] },
+  //   { name: 'CI / CD', icon: 'fas fa-rotate', color: '#d4ff70', level: 70, years: '1y', related: ['GitHub Actions'] },
+  // ],
   Tools: [
-    { name: 'Git', icon: 'fab fa-git-alt', color: '#F05032', level: 90, years: '3y', related: ['GitHub'] },
-    { name: 'Figma', icon: 'fab fa-figma', color: '#F24E1E', level: 78, years: '2y', related: ['Design tokens'] },
+    { name: 'Git', icon: 'fab fa-git-alt', color: '#F05032', level: 90, years: '1y', related: ['GitHub'] },
+    { name: 'Figma', icon: 'fab fa-figma', color: '#F24E1E', level: 78, years: '1y', related: ['Design tokens'] },
   ],
   'UI/UX': [
-    { name: 'Design Systems', icon: 'fas fa-layer-group', color: '#8b5cf6', level: 82, years: '2y', related: ['Storybook'] },
+    { name: 'Design Systems', icon: 'fas fa-layer-group', color: '#8b5cf6', level: 82, years: '1y', related: ['Storybook'] },
     { name: 'Motion / GSAP', icon: 'fas fa-wand-magic-sparkles', color: '#d4ff70', level: 76, years: '1y', related: ['Framer Motion'] },
   ],
 };
@@ -566,19 +658,19 @@ const filteredProjects = computed(() =>
 
 const experience = [
   {
-    role: 'Full-Stack Engineer', company: 'Product Studio', dates: '2025 — Present',
-    responsibilities: ['Lead frontend architecture for a multi-tenant SaaS platform', 'Mentor 2 junior developers', 'Own CI/CD pipeline and release process'],
-    tech: ['Vue 3', 'Node', 'PostgreSQL', 'Docker'],
-  },
-  {
-    role: 'Frontend Developer', company: 'Freelance', dates: '2023 — 2025',
-    responsibilities: ['Delivered 10+ client projects across e-commerce and dashboards', 'Built reusable component libraries'],
-    tech: ['Vue', 'React', 'Bootstrap', 'Firebase'],
-  },
-  {
-    role: 'Web Development Trainee', company: 'ANT Training Centre', dates: '2022 — 2023',
+    role: 'Full-Stack Web Development Trainee', company: 'ANT Training Centre', dates: '2025 — 2026',
     responsibilities: ['Completed intensive scholarship-funded full-stack program', 'Built capstone project from scratch'],
-    tech: ['HTML', 'CSS', 'JavaScript'],
+    tech: ['HTML', 'CSS', 'JavaScript', 'Vue', 'Node.js', 'Express', 'MySQL', 'Figma', 'Cyber Security'],
+  },
+  {
+    role: 'Web Designer', company: 'ANT Training Centre', dates: '2025 — 2026',
+    responsibilities: ['Won 1st place in a web design competition', 'Designed and developed responsive web pages for desktop and mobile screens', 'Created modern UI layouts including login pages and dashboards'],
+    tech: ['HTML', 'CSS', 'Bootstrap', 'Figma', 'Github'],
+  },
+  {
+    role: 'Front-End Leader', company: 'Connexion', dates: '2025 — 2026',
+    responsibilities: ['Won 1st place for project presentation','Received Best Disciplined Student Award','Led frontend development for a developer community platform', 'Built real-time dashboards integrated with APIs', 'Designed responsive interfaces for job seekers and developers'],
+    tech: ['Vue 3', 'JavaScript', 'Axios', 'REST API'],
   },
 ];
 
@@ -597,7 +689,7 @@ const stats = [
 
 const contacts = [
   { label: 'Email', value: 'zerwestin23@gmail.com', href: 'mailto:zerwestin23@gmail.com', icon: 'fas fa-envelope', color: '#d4ff70' },
-  { label: 'LinkedIn', value: '/in/Kim Chhorng Mao', href: 'https://www.linkedin.com/in/kim-chhorng-mao-461040370/?trk=public-profile-join-page', icon: 'fab fa-linkedin', color: '#0A66C2' },
+  { label: 'LinkedIn', value: 'Kim Chhorng Mao', href: 'https://www.linkedin.com/in/kim-chhorng-mao-461040370/?trk=public-profile-join-page', icon: 'fab fa-linkedin', color: '#0A66C2' },
   { label: 'GitHub', value: '/D3stro12629', href: 'https://github.com/D3stro12629?tab=repositories', icon: 'fab fa-github', color: '#ffffff' },
   { label: 'Telegram', value: '@destroholy', href: 'https://t.me/destroholy', icon: 'fab fa-telegram', color: '#26A5E4' },
 ];
@@ -717,8 +809,10 @@ onBeforeUnmount(() => {
 
 <style>
 /* ============================================================
-   DESIGN TOKENS
+  DESIGN TOKENS
    ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
 :root {
   --bg: #05070d;
   --bg-darker: #03040a;
@@ -734,8 +828,6 @@ onBeforeUnmount(() => {
   --body-font: 'Inter', sans-serif;
   --radius: 14px;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
 
 * {
   box-sizing: border-box;
