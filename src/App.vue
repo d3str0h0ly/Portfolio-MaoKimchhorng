@@ -148,6 +148,7 @@
                 <p>{{ c.body }}</p>
               </div>
             </div>
+            
 
             <div class="story-timeline">
               <div class="timeline-item reveal" v-for="(s, i) in story" :key="i" data-reveal
